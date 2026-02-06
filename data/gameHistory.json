@@ -1,0 +1,303 @@
+[
+  {
+    "roomId": "95422E",
+    "timestamp": "2026-02-06T12:14:43.007Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "villager",
+        "isAlive": true
+      },
+      {
+        "nickname": "xxx",
+        "role": "seer",
+        "isAlive": true
+      },
+      {
+        "nickname": "xxx得到的",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "xx休息休息x",
+        "role": "witch",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": []
+      }
+    ]
+  },
+  {
+    "roomId": "E5FB34",
+    "timestamp": "2026-02-06T12:18:16.196Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "witch",
+        "isAlive": true
+      },
+      {
+        "nickname": "xxx88",
+        "role": "seer",
+        "isAlive": true
+      },
+      {
+        "nickname": "88888",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "7777",
+        "role": "villager",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": []
+      }
+    ]
+  },
+  {
+    "roomId": "C6DD29",
+    "timestamp": "2026-02-06T12:21:49.882Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "villager",
+        "isAlive": true
+      },
+      {
+        "nickname": "7777",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "5555",
+        "role": "seer",
+        "isAlive": true
+      },
+      {
+        "nickname": "73333",
+        "role": "witch",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": []
+      }
+    ]
+  },
+  {
+    "roomId": "BFABA1",
+    "timestamp": "2026-02-06T12:24:11.935Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "witch",
+        "isAlive": true
+      },
+      {
+        "nickname": "博哦不",
+        "role": "villager",
+        "isAlive": false,
+        "deathReason": "werewolf"
+      },
+      {
+        "nickname": "电动机",
+        "role": "seer",
+        "isAlive": true
+      },
+      {
+        "nickname": "新活动",
+        "role": "werewolf",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": [
+          "IRuE6NckZ3onWrxbAAAr"
+        ]
+      }
+    ]
+  },
+  {
+    "roomId": "F601CF",
+    "timestamp": "2026-02-06T12:54:30.172Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 1,
+        "guard": 1
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "villager",
+        "isAlive": false,
+        "deathReason": "poison"
+      },
+      {
+        "nickname": "111",
+        "role": "guard",
+        "isAlive": true
+      },
+      {
+        "nickname": "2222",
+        "role": "witch",
+        "isAlive": true
+      },
+      {
+        "nickname": "3333",
+        "role": "seer",
+        "isAlive": true
+      },
+      {
+        "nickname": "bunny",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "honey",
+        "role": "hunter",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": [
+          "cuNSsIudPdt2KwouAAAD"
+        ]
+      }
+    ]
+  },
+  {
+    "roomId": "9D295F",
+    "timestamp": "2026-02-06T13:00:39.295Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "honey",
+        "role": "seer",
+        "isAlive": false,
+        "deathReason": "werewolf"
+      },
+      {
+        "nickname": "lulu",
+        "role": "villager",
+        "isAlive": true
+      },
+      {
+        "nickname": "kiki",
+        "role": "witch",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": [
+          "oQx1HY8RheyXDqrFAAAX"
+        ]
+      }
+    ]
+  }
+]
