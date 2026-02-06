@@ -426,5 +426,50 @@
         ]
       }
     ]
+  },
+  {
+    "roomId": "D19252",
+    "timestamp": "2026-02-06T16:39:05.288Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 0,
+        "seer": 1,
+        "witch": 0,
+        "hunter": 1,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "hello",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "h3多家肯德基",
+        "role": "seer",
+        "isAlive": false,
+        "deathReason": "werewolf"
+      },
+      {
+        "nickname": "h398导弹基地39",
+        "role": "hunter",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": [
+          "_nNAatHQEj0txadPAAA5"
+        ]
+      }
+    ]
   }
 ]

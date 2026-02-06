@@ -177,26 +177,29 @@ const Room = () => {
               {room.players.map((player) => (
                 <div key={player.id} className="relative group w-full">
                   {/* Polaroid Style Card - Horizontal Layout */}
-                  <div className="bg-paper-light p-3 shadow-md transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border border-ink/20 flex items-center gap-4">
+                  <div className="bg-paper-light p-2 shadow-md transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl border border-ink/20 flex items-center gap-3">
                     
                     {/* Pin */}
                     <div className="absolute -left-2 top-1/2 -translate-y-1/2 z-10">
-                      <div className="w-4 h-4 rounded-full bg-ink-red shadow-md border border-ink-dark" />
+                      <div className="w-3 h-3 rounded-full bg-ink-red shadow-md border border-ink-dark" />
                     </div>
 
                     {/* Photo */}
-                    <div className="w-16 h-16 shrink-0 bg-black/30 overflow-hidden filter grayscale contrast-125 group-hover:filter-none transition-all duration-500 border border-ink/30">
-                      <Avatar seed={player.avatar} size={64} className="w-full h-full object-cover" />
+                    <div className="w-12 h-12 shrink-0 bg-black/30 overflow-hidden filter grayscale contrast-125 group-hover:filter-none transition-all duration-500 border border-ink/30">
+                      <Avatar seed={player.avatar} size={48} className="w-full h-full object-cover" />
                     </div>
                     
                     {/* Name */}
                     <div className="flex-1 min-w-0">
-                      <div className="font-hand text-2xl font-bold text-ink truncate text-left">{player.nickname}</div>
+                      <div className="font-hand text-xl font-bold text-ink truncate text-left">{player.nickname}</div>
+                      {player.id === socket.id && (
+                         <div className="text-[10px] text-ink/60 font-bold uppercase tracking-wider text-left leading-none">YOU</div>
+                      )}
                     </div>
 
                     {/* Host Badge - Stamped look */}
                     {player.isHost && (
-                      <div className="border-2 border-ink-red text-ink-red text-xs font-bold px-2 py-1 transform -rotate-12 opacity-80 mix-blend-multiply bg-transparent shrink-0">
+                      <div className="border border-ink-red text-ink-red text-[10px] font-bold px-1.5 py-0.5 transform -rotate-12 opacity-80 mix-blend-multiply bg-transparent shrink-0">
                         {t.handler}
                       </div>
                     )}

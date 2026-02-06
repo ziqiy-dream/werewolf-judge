@@ -401,7 +401,7 @@ const Game = () => {
       )}>
         <div className={cn(
             "absolute inset-0 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cork-board.png')]",
-            currentPhase === 'night' ? "opacity-10" : "opacity-30 mix-blend-multiply"
+            currentPhase === 'night' ? "opacity-10" : "opacity-60 mix-blend-multiply"
         )}></div>
 
         {/* Witch's Info Panel */}

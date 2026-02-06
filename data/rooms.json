@@ -1,36 +1,16 @@
 [
   [
-    "8F94DA",
+    "27195D",
     {
-      "id": "8F94DA",
+      "id": "27195D",
       "players": [
         {
-          "id": "xOTV7UFA7MVp4c8QAAAv",
+          "id": "sXc01rv8LPKjzu7sAAA7",
           "nickname": "hello",
           "avatar": "Milo",
-          "isAlive": false,
+          "isAlive": true,
           "isHost": true,
-          "roomId": "8F94DA",
-          "role": "villager",
-          "deathReason": "werewolf"
-        },
-        {
-          "id": "p2ne9yYFFATjWqBvAAAz",
-          "nickname": "helloddd大开绿灯",
-          "avatar": "avatar1",
-          "isAlive": true,
-          "isHost": false,
-          "roomId": "8F94DA",
-          "role": "werewolf"
-        },
-        {
-          "id": "MmJa5Cud5ZEi64rpAAAx",
-          "nickname": "h39839",
-          "avatar": "avatar1",
-          "isAlive": true,
-          "isHost": false,
-          "roomId": "8F94DA",
-          "role": "seer"
+          "roomId": "27195D"
         }
       ],
       "settings": {
@@ -38,17 +18,17 @@
           "werewolf": 1,
           "villager": 1,
           "seer": 1,
-          "witch": 0,
-          "hunter": 0,
-          "guard": 0
+          "witch": 1,
+          "hunter": 1,
+          "guard": 1
         }
       },
       "gameState": {
-        "phase": "day",
+        "phase": "waiting",
         "nightPhase": null,
-        "dayCount": 1,
-        "phaseStartTime": 1770395597477,
-        "phaseDuration": 10,
+        "dayCount": 0,
+        "phaseStartTime": 0,
+        "phaseDuration": 0,
         "winner": null,
         "nightActions": [],
         "werewolfVotes": {},
@@ -58,17 +38,10 @@
           "hasPoison": true
         },
         "guardLastProtect": null,
-        "deadPlayers": [
-          {
-            "day": 1,
-            "playerIds": [
-              "xOTV7UFA7MVp4c8QAAAv"
-            ]
-          }
-        ],
+        "deadPlayers": [],
         "seerResult": null
       },
-      "createdAt": 1770395400679
+      "createdAt": 1770396082983
     }
   ]
 ]
