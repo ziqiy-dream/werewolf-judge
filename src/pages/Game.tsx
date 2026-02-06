@@ -440,7 +440,7 @@ const Game = () => {
                 </div>
 
                 <div className="w-full aspect-square mb-1 sm:mb-2 relative overflow-hidden flex items-center justify-center p-1 sm:p-2">
-                  <Avatar seed={player.avatar} size={120} className="w-full h-full object-cover filter contrast-125 sepia-[0.3]" />
+                  <Avatar seed={player.avatar} size={96} className="w-full h-full object-cover filter contrast-125 sepia-[0.3]" />
                   
                   {/* Death Overlay */}
                   {!player.isAlive && (
@@ -463,7 +463,7 @@ const Game = () => {
                   </div>
                   
                   {player.id === room.players.find(p => p.nickname === nickname)?.id && (
-                     <div className="absolute top-0 right-0">
+                     <div className="absolute top-1 right-0">
                        <span className="bg-transparent text-ink-red text-[10px] px-1 font-bold inline-block">
                          YOU
                        </span>
