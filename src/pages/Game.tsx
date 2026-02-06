@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useGameStore } from '../store/useGameStore';
 import { getSocket } from '../hooks/useSocket';
 import { Avatar } from '../components/Avatar';
@@ -122,6 +122,9 @@ const Game = () => {
   }, [room.gameState.phase, room.gameState.nightPhase]);
 
   // Audio Logic using SpeechSynthesis
+  const prevPhaseRef = useRef(room.gameState.phase);
+  const prevNightPhaseRef = useRef(room.gameState.nightPhase);
+
   useEffect(() => {
       if (!isHost) return;
 
@@ -131,16 +134,50 @@ const Game = () => {
           window.speechSynthesis.speak(utterance);
       };
 
+      const prevPhase = prevPhaseRef.current;
+      const prevNightPhase = prevNightPhaseRef.current;
+      const isPhaseChanged = currentPhase !== prevPhase;
+      const isNightPhaseChanged = nightPhase !== prevNightPhase;
+
+      // Helper to get close text
+      const getCloseText = (role: string) => {
+          const roleMap: Record<string, string> = {
+              werewolf: language === 'zh' ? '狼人' : 'Werewolves',
+              seer: language === 'zh' ? '预言家' : 'Seer',
+              witch: language === 'zh' ? '女巫' : 'Witch',
+              guard: language === 'zh' ? '守卫' : 'Guard',
+          };
+          const name = roleMap[role] || role;
+          return language === 'zh' ? `${name}请闭眼` : `${name}, close your eyes.`;
+      };
+
       if (currentPhase === 'setup') {
           // Manual trigger
       } else if (currentPhase === 'night') {
-          if (nightPhase === 'closing') speak(language === 'zh' ? "天黑请闭眼" : "Night falls, close your eyes.");
-          else if (nightPhase === 'werewolf') speak(language === 'zh' ? "狼人请睁眼，请选择要击杀的目标" : "Werewolves, open your eyes and choose a target.");
-          else if (nightPhase === 'seer') speak(language === 'zh' ? "预言家请睁眼，请选择要查验的目标" : "Seer, open your eyes and check a player.");
-          else if (nightPhase === 'witch') speak(language === 'zh' ? "女巫请睁眼，今晚他死了，你要救吗？" : "Witch, open your eyes. This player died, will you save them?");
-          else if (nightPhase === 'guard') speak(language === 'zh' ? "守卫请睁眼，请选择要守护的目标" : "Guard, open your eyes and protect someone.");
-      } else if (currentPhase === 'day') {
-           // Dynamic Day Announcement
+          if (nightPhase === 'closing') {
+               // Initial night start
+               if (isPhaseChanged || isNightPhaseChanged) {
+                   speak(language === 'zh' ? "天黑请闭眼" : "Night falls, close your eyes.");
+               }
+          } else if (isNightPhaseChanged && nightPhase) {
+               // 1. Close previous role if exists
+               if (prevNightPhase && prevNightPhase !== 'closing') {
+                   speak(getCloseText(prevNightPhase));
+               }
+
+               // 2. Open current role
+               if (nightPhase === 'werewolf') speak(language === 'zh' ? "狼人请睁眼，请选择要击杀的目标" : "Werewolves, open your eyes and choose a target.");
+               else if (nightPhase === 'seer') speak(language === 'zh' ? "预言家请睁眼，请选择要查验的目标" : "Seer, open your eyes and check a player.");
+               else if (nightPhase === 'witch') speak(language === 'zh' ? "女巫请睁眼，今晚他死了，你要救吗？" : "Witch, open your eyes. This player died, will you save them?");
+               else if (nightPhase === 'guard') speak(language === 'zh' ? "守卫请睁眼，请选择要守护的目标" : "Guard, open your eyes and protect someone.");
+          }
+      } else if (currentPhase === 'day' && isPhaseChanged) {
+           // 1. Close last night role
+           if (prevNightPhase && prevNightPhase !== 'closing') {
+               speak(getCloseText(prevNightPhase));
+           }
+
+           // 2. Day Announcement
            let text = language === 'zh' ? "天亮了，昨晚平安夜" : "Day breaks. Last night was peaceful.";
            if (lastNightDeaths && lastNightDeaths.playerIds.length > 0) {
                const deadNames = lastNightDeaths.playerIds.map(id => room.players.find(p => p.id === id)?.nickname).filter(Boolean).join(", ");
@@ -148,6 +185,11 @@ const Game = () => {
            }
            speak(text);
       }
+      
+      // Update refs
+      prevPhaseRef.current = currentPhase;
+      prevNightPhaseRef.current = nightPhase;
+
   }, [currentPhase, nightPhase, isHost, language, lastNightDeaths]);
 
 
