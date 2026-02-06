@@ -381,5 +381,50 @@
         ]
       }
     ]
+  },
+  {
+    "roomId": "8F94DA",
+    "timestamp": "2026-02-06T16:33:17.475Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 1,
+        "seer": 1,
+        "witch": 0,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "hello",
+        "role": "villager",
+        "isAlive": false,
+        "deathReason": "werewolf"
+      },
+      {
+        "nickname": "helloddd大开绿灯",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "h39839",
+        "role": "seer",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": [
+          "xOTV7UFA7MVp4c8QAAAv"
+        ]
+      }
+    ]
   }
 ]

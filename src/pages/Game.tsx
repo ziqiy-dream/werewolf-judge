@@ -420,7 +420,7 @@ const Game = () => {
             </div>
         )}
 
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-6">
           {room.players.map((player) => (
             <div 
               key={player.id} 
@@ -429,23 +429,23 @@ const Game = () => {
                 "relative transition-all duration-300 group perspective-500",
                 !player.isAlive && "grayscale opacity-70",
                 canSelect && "cursor-pointer hover:scale-105",
-                selectedPlayerId === player.id && "ring-4 ring-ink-red scale-105"
+                selectedPlayerId === player.id && "ring-2 sm:ring-4 ring-ink-red scale-105"
               )}
             >
-              <div className="bg-paper p-2 pb-6 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)] transform rotate-1 group-hover:rotate-0 group-hover:scale-105 group-hover:shadow-2xl transition-all duration-300 border border-ink/20 relative flex flex-col items-center">
+              <div className="bg-paper p-1 sm:p-2 pb-4 sm:pb-6 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)] transform rotate-1 group-hover:rotate-0 group-hover:scale-105 group-hover:shadow-2xl transition-all duration-300 border border-ink/20 relative flex flex-col items-center h-full">
                 
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 filter drop-shadow-md">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 filter drop-shadow-md hidden sm:block">
                    <div className="w-3 h-3 rounded-full bg-red-800 border border-black/50" />
                    <div className="w-0.5 h-2 bg-gray-400 mx-auto -mt-0.5" />
                 </div>
 
-                <div className="w-full aspect-square mb-2 relative overflow-hidden flex items-center justify-center p-2">
+                <div className="w-full aspect-square mb-1 sm:mb-2 relative overflow-hidden flex items-center justify-center p-1 sm:p-2">
                   <Avatar seed={player.avatar} size={120} className="w-full h-full object-cover filter contrast-125 sepia-[0.3]" />
                   
                   {/* Death Overlay */}
                   {!player.isAlive && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[1px]">
-                      <span className="border-4 border-red-800 text-red-800 font-bold text-xl px-2 py-1 transform -rotate-45 mix-blend-hard-light bg-paper/20 backdrop-blur-sm">
+                      <span className="border-2 sm:border-4 border-red-800 text-red-800 font-bold text-xs sm:text-xl px-1 sm:px-2 py-0.5 sm:py-1 transform -rotate-45 mix-blend-hard-light bg-paper/20 backdrop-blur-sm">
                         DECEASED
                       </span>
                     </div>
@@ -453,18 +453,18 @@ const Game = () => {
 
                   {/* Role Specific Indicators */}
                   {safeMyRole === 'werewolf' && player.role === 'werewolf' && player.id !== socket.id && (
-                      <div className="absolute top-0 right-0 bg-ink-red text-white text-xs px-2 py-1">ALLY</div>
+                      <div className="absolute top-0 right-0 bg-ink-red text-white text-[10px] sm:text-xs px-1 sm:px-2 py-0.5 sm:py-1">ALLY</div>
                   )}
                 </div>
 
-                <div className="text-center relative w-full px-1">
-                  <div className="font-hand text-xl font-bold truncate text-ink transform -rotate-1 group-hover:rotate-0 transition-transform">
+                <div className="text-center relative w-full px-0.5 sm:px-1 flex-1 flex flex-col justify-between">
+                  <div className="font-hand text-sm sm:text-xl font-bold truncate text-ink transform -rotate-1 group-hover:rotate-0 transition-transform">
                     {player.nickname}
                   </div>
                   
                   {player.id === room.players.find(p => p.nickname === nickname)?.id && (
-                     <div className="absolute -bottom-5 left-0 right-0 text-center">
-                       <span className="bg-ink text-[#e6e2d3] text-[10px] px-2 py-0.5 uppercase tracking-widest font-bold inline-block transform -rotate-2">
+                     <div className="absolute top-0 right-0">
+                       <span className="bg-transparent text-ink-red text-[10px] px-1 font-bold inline-block">
                          YOU
                        </span>
                      </div>

@@ -1,33 +1,42 @@
 [
   [
-    "B45C5B",
+    "8F94DA",
     {
-      "id": "B45C5B",
+      "id": "8F94DA",
       "players": [
         {
-          "id": "UUML-suTmw-mOZmNAAAr",
+          "id": "xOTV7UFA7MVp4c8QAAAv",
           "nickname": "hello",
           "avatar": "Milo",
           "isAlive": false,
           "isHost": true,
-          "roomId": "B45C5B",
-          "role": "seer",
+          "roomId": "8F94DA",
+          "role": "villager",
           "deathReason": "werewolf"
         },
         {
-          "id": "G1Dnln0uKfBwZgrjAAAt",
-          "nickname": "helloddd",
+          "id": "p2ne9yYFFATjWqBvAAAz",
+          "nickname": "helloddd大开绿灯",
           "avatar": "avatar1",
           "isAlive": true,
           "isHost": false,
-          "roomId": "B45C5B",
+          "roomId": "8F94DA",
           "role": "werewolf"
+        },
+        {
+          "id": "MmJa5Cud5ZEi64rpAAAx",
+          "nickname": "h39839",
+          "avatar": "avatar1",
+          "isAlive": true,
+          "isHost": false,
+          "roomId": "8F94DA",
+          "role": "seer"
         }
       ],
       "settings": {
         "roles": {
           "werewolf": 1,
-          "villager": 0,
+          "villager": 1,
           "seer": 1,
           "witch": 0,
           "hunter": 0,
@@ -38,7 +47,7 @@
         "phase": "day",
         "nightPhase": null,
         "dayCount": 1,
-        "phaseStartTime": 1770395168972,
+        "phaseStartTime": 1770395597477,
         "phaseDuration": 10,
         "winner": null,
         "nightActions": [],
@@ -53,13 +62,13 @@
           {
             "day": 1,
             "playerIds": [
-              "UUML-suTmw-mOZmNAAAr"
+              "xOTV7UFA7MVp4c8QAAAv"
             ]
           }
         ],
         "seerResult": null
       },
-      "createdAt": 1770394634616
+      "createdAt": 1770395400679
     }
   ]
 ]
