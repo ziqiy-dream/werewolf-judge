@@ -341,5 +341,45 @@
         "playerIds": []
       }
     ]
+  },
+  {
+    "roomId": "B45C5B",
+    "timestamp": "2026-02-06T16:26:08.970Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 0,
+        "seer": 1,
+        "witch": 0,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "hello",
+        "role": "seer",
+        "isAlive": false,
+        "deathReason": "werewolf"
+      },
+      {
+        "nickname": "helloddd",
+        "role": "werewolf",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": [
+          "UUML-suTmw-mOZmNAAAr"
+        ]
+      }
+    ]
   }
 ]

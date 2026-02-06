@@ -8,10 +8,11 @@
           "id": "UUML-suTmw-mOZmNAAAr",
           "nickname": "hello",
           "avatar": "Milo",
-          "isAlive": true,
+          "isAlive": false,
           "isHost": true,
           "roomId": "B45C5B",
-          "role": "seer"
+          "role": "seer",
+          "deathReason": "werewolf"
         },
         {
           "id": "G1Dnln0uKfBwZgrjAAAt",
@@ -34,11 +35,11 @@
         }
       },
       "gameState": {
-        "phase": "setup",
+        "phase": "day",
         "nightPhase": null,
-        "dayCount": 0,
-        "phaseStartTime": 1770394774195,
-        "phaseDuration": 0,
+        "dayCount": 1,
+        "phaseStartTime": 1770395168972,
+        "phaseDuration": 10,
         "winner": null,
         "nightActions": [],
         "werewolfVotes": {},
@@ -48,7 +49,14 @@
           "hasPoison": true
         },
         "guardLastProtect": null,
-        "deadPlayers": [],
+        "deadPlayers": [
+          {
+            "day": 1,
+            "playerIds": [
+              "UUML-suTmw-mOZmNAAAr"
+            ]
+          }
+        ],
         "seerResult": null
       },
       "createdAt": 1770394634616

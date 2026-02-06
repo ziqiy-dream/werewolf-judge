@@ -361,15 +361,15 @@ const Game = () => {
       <header className="bg-[#1a1816] border-b border-ink/30 text-paper p-4 shadow-lg z-10 flex flex-wrap justify-between items-center relative gap-4">
         <div className="flex items-center gap-6 flex-wrap">
           <div className="flex flex-col">
-            <span className="text-xs text-paper-light uppercase tracking-widest font-bold">Timeline</span>
-            <span className="font-typewriter font-bold text-2xl text-paper-light">DAY {room.gameState.dayCount}</span>
+            <span className="text-xs text-[#e6e2d3] uppercase tracking-widest font-bold">Timeline</span>
+            <span className="font-typewriter font-bold text-2xl text-[#e6e2d3]">DAY {room.gameState.dayCount}</span>
           </div>
           
           <div className="h-8 w-px bg-white/20 hidden sm:block" />
           
           <div className="flex items-center gap-3 px-4 py-2 bg-white/5 rounded border border-white/10">
              {room.gameState.phase === 'night' ? <Moon className="w-5 h-5 text-purple-400" /> : <Sun className="w-5 h-5 text-orange-400" />}
-             <span className="uppercase tracking-wider font-bold text-paper-light">
+             <span className="uppercase tracking-wider font-bold text-[#e6e2d3]">
                  {currentPhase === 'setup' ? t.phase_setup : 
                   currentPhase === 'night' ? t[`night_${nightPhase}`] || t.phase_night : 
                   t.phase_day}
@@ -387,10 +387,10 @@ const Game = () => {
         
         <button 
           onClick={() => setShowRoleCard(true)}
-          className="flex items-center gap-2 text-sm border border-paper px-4 py-2 rounded hover:bg-paper/10 transition-colors uppercase tracking-wider text-paper-light"
+          className="flex items-center justify-center w-10 h-10 border border-paper px-0 rounded-full hover:bg-paper/10 transition-colors text-[#e6e2d3]"
+          title="View Dossier"
         >
-          <FileText className="w-4 h-4" />
-          View Dossier
+          <FileText className="w-5 h-5" />
         </button>
       </header>
 
@@ -464,7 +464,7 @@ const Game = () => {
                   
                   {player.id === room.players.find(p => p.nickname === nickname)?.id && (
                      <div className="absolute -bottom-5 left-0 right-0 text-center">
-                       <span className="bg-ink text-paper-light text-[10px] px-2 py-0.5 uppercase tracking-widest font-bold inline-block transform -rotate-2">
+                       <span className="bg-ink text-[#e6e2d3] text-[10px] px-2 py-0.5 uppercase tracking-widest font-bold inline-block transform -rotate-2">
                          YOU
                        </span>
                      </div>
@@ -486,7 +486,7 @@ const Game = () => {
              </div>
              
              <div>
-               <div className="font-typewriter font-bold text-xl uppercase tracking-widest text-paper-light mb-1">
+               <div className="font-typewriter font-bold text-xl uppercase tracking-widest text-[#e6e2d3] mb-1">
                  {roleName}
                </div>
                <div className="text-sm font-hand text-ink-red text-xl opacity-90 animate-pulse">
