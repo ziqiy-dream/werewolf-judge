@@ -299,5 +299,47 @@
         ]
       }
     ]
+  },
+  {
+    "roomId": "482980",
+    "timestamp": "2026-02-06T16:11:27.016Z",
+    "settings": {
+      "roles": {
+        "werewolf": 1,
+        "villager": 0,
+        "seer": 1,
+        "witch": 1,
+        "hunter": 0,
+        "guard": 0
+      }
+    },
+    "finalState": {
+      "phase": "night",
+      "dayCount": 1
+    },
+    "players": [
+      {
+        "nickname": "cony",
+        "role": "werewolf",
+        "isAlive": true
+      },
+      {
+        "nickname": "超级困超级查看",
+        "role": "witch",
+        "isAlive": true
+      },
+      {
+        "nickname": "hello",
+        "role": "seer",
+        "isAlive": true
+      }
+    ],
+    "winner": null,
+    "history": [
+      {
+        "day": 1,
+        "playerIds": []
+      }
+    ]
   }
 ]

@@ -168,10 +168,10 @@ const Room = () => {
             <div className="absolute -top-3 left-1/3 w-24 h-6 bg-yellow-100/80 rotate-2 shadow-sm border-l border-r border-white/50" />
             <div className="absolute -bottom-3 right-1/3 w-24 h-6 bg-yellow-100/80 -rotate-2 shadow-sm border-l border-r border-white/50" />
 
-            <h2 className="text-2xl font-bold mb-6 flex items-center gap-3 border-b-2 border-ink pb-2 text-ink uppercase tracking-wider">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3 border-b-2 border-ink pb-2 text-ink uppercase tracking-wider">
               <Users className="w-6 h-6" />
               {t.suspectsBoard} ({room.players.length})
-            </h2>
+            </h3>
             
             <div className="flex flex-col gap-4">
               {room.players.map((player) => (
@@ -215,10 +215,10 @@ const Room = () => {
                 <div className="w-20 h-4 bg-black/50 rounded-full" />
              </div>
 
-             <h2 className="text-xl font-bold mb-6 mt-4 flex items-center gap-2 border-b-2 border-ink/30 pb-2 text-ink uppercase">
+             <h3 className="text-xl font-bold mb-6 mt-4 flex items-center gap-2 border-b-2 border-ink/30 pb-2 text-ink uppercase">
               <Settings className="w-5 h-5" />
-              {t.missionParameters}
-            </h2>
+              角色参数
+            </h3>
             
             <div className="space-y-4 font-hand text-lg">
               {(Object.keys(room.settings.roles) as Role[]).map((role) => (

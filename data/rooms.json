@@ -1,1 +1,57 @@
-[]
+[
+  [
+    "B45C5B",
+    {
+      "id": "B45C5B",
+      "players": [
+        {
+          "id": "UUML-suTmw-mOZmNAAAr",
+          "nickname": "hello",
+          "avatar": "Milo",
+          "isAlive": true,
+          "isHost": true,
+          "roomId": "B45C5B",
+          "role": "seer"
+        },
+        {
+          "id": "G1Dnln0uKfBwZgrjAAAt",
+          "nickname": "helloddd",
+          "avatar": "avatar1",
+          "isAlive": true,
+          "isHost": false,
+          "roomId": "B45C5B",
+          "role": "werewolf"
+        }
+      ],
+      "settings": {
+        "roles": {
+          "werewolf": 1,
+          "villager": 0,
+          "seer": 1,
+          "witch": 0,
+          "hunter": 0,
+          "guard": 0
+        }
+      },
+      "gameState": {
+        "phase": "setup",
+        "nightPhase": null,
+        "dayCount": 0,
+        "phaseStartTime": 1770394774195,
+        "phaseDuration": 0,
+        "winner": null,
+        "nightActions": [],
+        "werewolfVotes": {},
+        "currentWolfTarget": null,
+        "witchInventory": {
+          "hasAntidote": true,
+          "hasPoison": true
+        },
+        "guardLastProtect": null,
+        "deadPlayers": [],
+        "seerResult": null
+      },
+      "createdAt": 1770394634616
+    }
+  ]
+]
