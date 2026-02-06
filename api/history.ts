@@ -3,12 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import { Room } from '../src/types/index';
 
-const HISTORY_DIR = path.join(process.cwd(), 'data');
-const HISTORY_FILE = path.join(HISTORY_DIR, 'gameHistory.json');
+// Use environment variable for data directory if provided, otherwise default to local 'data' folder
+const BASE_DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
+const HISTORY_FILE = path.join(BASE_DATA_DIR, 'gameHistory.json');
 
 // Ensure directory exists
-if (!fs.existsSync(HISTORY_DIR)) {
-  fs.mkdirSync(HISTORY_DIR, { recursive: true });
+if (!fs.existsSync(BASE_DATA_DIR)) {
+  fs.mkdirSync(BASE_DATA_DIR, { recursive: true });
 }
 
 interface GameHistoryEntry {

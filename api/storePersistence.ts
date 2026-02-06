@@ -3,12 +3,13 @@ import fs from 'fs';
 import path from 'path';
 import { Room } from '../src/types/index';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const ROOMS_FILE = path.join(DATA_DIR, 'rooms.json');
+// Use environment variable for data directory if provided, otherwise default to local 'data' folder
+const BASE_DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
+const ROOMS_FILE = path.join(BASE_DATA_DIR, 'rooms.json');
 
 // Ensure directory exists
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+if (!fs.existsSync(BASE_DATA_DIR)) {
+  fs.mkdirSync(BASE_DATA_DIR, { recursive: true });
 }
 
 export const saveRooms = (rooms: Map<string, Room>) => {
