@@ -235,15 +235,6 @@ const Game = () => {
                              <span className="text-ink-red border-4 border-ink-red px-4 py-2 inline-block">WEREWOLF</span> : 
                              <div className="flex flex-col items-center">
                                 <span className="text-green-800 border-4 border-green-800 px-4 py-2 inline-block">GOOD SIDE</span>
-                                {seerResult.role ? (
-                                    <span className="text-green-800 text-xl mt-2 font-typewriter uppercase">
-                                        ({t[`role_${seerResult.role}`] || seerResult.role})
-                                    </span>
-                                ) : (
-                                    <span className="text-red-600 text-sm mt-2 font-mono">
-                                        (Data Error: Role Missing)
-                                    </span>
-                                )}
                              </div>
                          }
                      </p>

@@ -319,11 +319,13 @@ class GameStore {
         if (action.targetId) {
             const target = room.players.find(p => p.id === action.targetId);
             if (target) {
-                // Return full role information for Seer
+                // Return faction information for Seer (Good vs Bad)
+                // Werewolf = Bad (isWerewolf: true)
+                // Everyone else = Good (isWerewolf: false)
                 room.gameState.seerResult = { 
                     nickname: target.nickname, 
                     isWerewolf: target.role === 'werewolf',
-                    role: target.role // Add specific role
+                    // REMOVED: role: target.role (Seer should not see specific role)
                 };
                 // Also record the action
                 room.gameState.nightActions.push(action);
